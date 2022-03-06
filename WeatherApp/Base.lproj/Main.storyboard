@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="13122.16" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,12 +19,101 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="VXL-AN-FKE">
+                                <rect key="frame" x="150" y="459.5" width="300" height="160.5"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awesome weather app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyC-ld-HIh">
+                                <rect key="frame" x="850" y="133" width="567" height="69"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current local temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk0-Fh-Xgr">
+                                <rect key="frame" x="850" y="246" width="308" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekn-M2-jIQ">
+                                <rect key="frame" x="850" y="481" width="310" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="systemTealColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dew point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8Y-Jl-igI">
+                                <rect key="frame" x="850" y="722" width="169" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbq-dF-bjN">
+                                <rect key="frame" x="850" y="369" width="92" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFo-XB-rSi">
+                                <rect key="frame" x="850" y="851" width="92" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQU-4y-6PZ">
+                                <rect key="frame" x="850" y="590" width="92" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="X8Y-Jl-igI" firstAttribute="top" secondItem="iQU-4y-6PZ" secondAttribute="bottom" constant="86" id="4FS-S5-tOi"/>
+                            <constraint firstItem="iyC-ld-HIh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="4j0-Ky-UFA"/>
+                            <constraint firstItem="yk0-Fh-Xgr" firstAttribute="top" secondItem="iyC-ld-HIh" secondAttribute="bottom" constant="44" id="7jx-ML-KCK"/>
+                            <constraint firstItem="VXL-AN-FKE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="400" id="Eg3-UM-bFU"/>
+                            <constraint firstItem="X8Y-Jl-igI" firstAttribute="leading" secondItem="fFo-XB-rSi" secondAttribute="leading" id="GTE-Ge-tgE"/>
+                            <constraint firstItem="ekn-M2-jIQ" firstAttribute="top" secondItem="gbq-dF-bjN" secondAttribute="bottom" constant="66" id="ImV-Q7-xcV"/>
+                            <constraint firstItem="gbq-dF-bjN" firstAttribute="leading" secondItem="ekn-M2-jIQ" secondAttribute="leading" id="M95-eJ-HaS"/>
+                            <constraint firstItem="VXL-AN-FKE" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="70" id="OrQ-We-XmK"/>
+                            <constraint firstItem="yk0-Fh-Xgr" firstAttribute="leading" secondItem="gbq-dF-bjN" secondAttribute="leading" id="Szc-LB-BmS"/>
+                            <constraint firstItem="iQU-4y-6PZ" firstAttribute="leading" secondItem="X8Y-Jl-igI" secondAttribute="leading" id="TWX-Wa-gm6"/>
+                            <constraint firstItem="fFo-XB-rSi" firstAttribute="top" secondItem="X8Y-Jl-igI" secondAttribute="bottom" constant="83" id="UtQ-ZQ-7E7"/>
+                            <constraint firstItem="VXL-AN-FKE" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XCf-Re-hl7"/>
+                            <constraint firstItem="iQU-4y-6PZ" firstAttribute="top" secondItem="ekn-M2-jIQ" secondAttribute="bottom" constant="63" id="YdC-uP-M9a"/>
+                            <constraint firstItem="ekn-M2-jIQ" firstAttribute="leading" secondItem="iQU-4y-6PZ" secondAttribute="leading" id="ZZV-WY-Kvq"/>
+                            <constraint firstItem="gbq-dF-bjN" firstAttribute="top" secondItem="yk0-Fh-Xgr" secondAttribute="bottom" constant="77" id="c2c-vg-kA2"/>
+                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="VXL-AN-FKE" secondAttribute="trailing" constant="1390" id="f2d-bq-8Er"/>
+                            <constraint firstItem="iyC-ld-HIh" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="770" id="gw0-PM-5vj"/>
+                            <constraint firstItem="iyC-ld-HIh" firstAttribute="leading" secondItem="yk0-Fh-Xgr" secondAttribute="leading" id="szS-Mi-z8Y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentConditions" destination="iQU-4y-6PZ" id="RRp-ud-Beq"/>
+                        <outlet property="currentTemp" destination="gbq-dF-bjN" id="IMe-4z-z1s"/>
+                        <outlet property="dewPoint" destination="fFo-XB-rSi" id="91x-gV-t6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-32" y="-5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="sun.max.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
